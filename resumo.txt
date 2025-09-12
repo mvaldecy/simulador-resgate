@@ -1,0 +1,52 @@
+📌 Contexto
+
+Um grupo de bombeiros precisa resgatar vítimas em um edifício em chamas, representado como um labirinto modelado em grafo.
+	•	Nós = salas/corredores.
+	•	Arestas = passagens entre salas.
+	•	Custos = dificuldade de atravessar (livre = 1, fumaça = 5, etc.).
+	•	Incerteza estocástica = probabilidade de bloqueio ou aumento de custo em determinadas arestas.
+
+⸻
+
+🏢 Estrutura do Prédio
+	•	7 andares.
+	•	Cada andar tem 12 salas (1 a 12).
+	•	Entrada: Sala 1 do 1º andar.
+	•	Saída: Sala 12 do 7º andar.
+
+Conexões Internas
+	•	Pares entre si: 2↔4, 4↔6, …, 10↔12.
+	•	Ímpares entre si: 1↔3, 3↔5, …, 9↔11.
+	•	Todas as salas de um andar estão ligadas por um corredor comum.
+
+Conexões Verticais
+	•	Sempre na Sala 6 de cada andar → conecta com a Sala 6 do andar de cima (escada).
+
+⸻
+
+⚠️ Incertezas Estocásticas
+	•	Portas entre pares/ímpares: 15% de chance de estarem bloqueadas.
+	•	Corredores: 30% chance de fumaça (custo sobe para 5).
+	•	Escadas: 20% chance de congestionamento (custo dobra).
+
+⸻
+
+🎯 Tarefas dos Estudantes
+	1.	Modelar o prédio como grafo ou matriz de adjacência, incluindo probabilidades.
+	2.	Implementar dois algoritmos de busca:
+	•	Um não informado: BFS ou DFS.
+	•	Um informado: Dijkstra ou A*.
+	3.	Simular as incertezas em várias execuções.
+	4.	Comparar os resultados:
+	•	BFS/DFS encontra caminho válido?
+	•	Dijkstra/A* encontra caminho de menor custo mesmo com incerteza?
+	•	Em quais situações cada algoritmo é mais adequado?
+
+⸻
+
+✅ Objetivo Final
+
+Demonstrar:
+	•	Modelagem do problema como grafo.
+	•	Implementação de algoritmos de busca.
+	•	Análise do impacto da incerteza nas decisões do agente ￼.
